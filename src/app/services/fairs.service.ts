@@ -9,7 +9,7 @@ import { Fair } from '../models/fair.model';
 export class FairsService {
 
   private favoriteKey = 'favorites';
-  private jsonUrl = '/fairs.json'; // Ruta al JSON local
+  private jsonUrl = 'fairs.json'; // Ruta al JSON local
 
   private currentRegion = new BehaviorSubject(''); // Nom de la Regió actual seleccionada per l'usuari
 
