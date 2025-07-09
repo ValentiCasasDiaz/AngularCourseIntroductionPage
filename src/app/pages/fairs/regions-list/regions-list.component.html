@@ -1,0 +1,15 @@
+<div class="container">
+
+    <h1>Nom de regions on hi ha fires:</h1>
+
+    @if (regionNames$ | async; as regions) {
+        
+        @for (region of regions; track region) {
+            <button class="card" (click)="onRegionPressed(region)">{{region}}</button>
+        }
+    } 
+    @else {
+        <h1>Carregant...</h1>
+    }
+
+</div>

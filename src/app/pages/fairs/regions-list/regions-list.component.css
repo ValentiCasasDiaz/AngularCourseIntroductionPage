@@ -1,0 +1,14 @@
+.container {
+    width: 35%;
+    margin: 5px;
+    float: left;
+    border: 5px solid green;
+}
+
+.card {
+    margin: 10px;
+    padding: 5px;
+    border: 2px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+}

@@ -1,0 +1,14 @@
+<div class="container">
+    @for(item of favorites; track item.activityId) {
+        <div class="card">
+            <h2>{{item.municipalityName}}</h2>
+            <h4>{{item.activityName}}</h4>
+            <p><b>Start:</b> {{getStartDate(item)}}</p>
+            <p><b>End:</b> {{getEndDate(item)}}</p>
+            <input type="checkbox" [id]="item.activityName" [name]="item.activityName" 
+                                [value]="item.activityName" [checked]="getValueCheckedFor(item)" (click)="onFairPressed(item, $event)">
+            &nbsp;&nbsp;&nbsp;
+            <i class="fa fa-eye" style="cursor: pointer;" (click)="goToFairDetails(item)"></i>
+        </div>    
+    }
+</div> 

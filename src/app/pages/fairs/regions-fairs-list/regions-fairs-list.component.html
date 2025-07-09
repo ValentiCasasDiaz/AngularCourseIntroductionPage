@@ -1,0 +1,22 @@
+<div class="container">
+
+    @if (fairs$ | async; as fairs) {
+        <h1>{{currentRegion}}</h1>
+
+        @for (item of fairs; track item.activityId) {
+            <div class="card">
+                <input type="checkbox" [id]="item.activityName" [name]="item.activityName" 
+                                    [value]="item.activityName" [checked]="getValueCheckedFor(item)" 
+                                    (click)="onFairPressed(item, $event)">
+                <label [for]="item.activityName">{{item.activityName}}</label>
+                &nbsp;
+                <i class="fa fa-eye" style="cursor: pointer;" (click)="goToFairDetails(item)"></i>
+            </div>    
+        } 
+    }
+    @else {
+        <h1>Carregant...</h1>
+    }
+
+   
+</div>

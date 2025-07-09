@@ -1,0 +1,13 @@
+.container {
+    width: 60%;
+    margin: 5px;
+    float: right;
+    border: 5px solid purple;
+}
+
+.card {
+    margin: 10px;
+    padding: 5px;
+    border: 2px solid black;
+    border-radius: 10px;
+}

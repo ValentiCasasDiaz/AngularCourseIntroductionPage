@@ -1,0 +1,17 @@
+<div class="container">
+    @if (fair$ | async; as fair) {
+        <h1>{{fair.municipalityName}}</h1>
+        <h2>{{fair.organizerName}}</h2>
+        <h3>{{fair.activityName}}</h3>
+        <p>{{fair.products}}</p>
+        <p><b>Data inici: </b> {{stringDateToLocale(fair.iniDate)}}</p>
+        <p><b>Data Fi: </b> {{stringDateToLocale(fair.endDate)}}</p>
+
+        <input type="checkbox" [id]="fair.activityName" [name]="fair.activityName" 
+                                [value]="fair.activityName" [checked]="getValueCheckedFor(fair)" 
+                                (click)="onFairPressed(fair, $event)">
+    }
+    @else {
+        <h1>Fair not found for this ID</h1>
+    }
+</div>
